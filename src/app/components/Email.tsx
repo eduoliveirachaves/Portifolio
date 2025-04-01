@@ -6,7 +6,7 @@ import Image from "next/image";
 const Email = () => {
   return (
     <section className="grid md:grid-cols-2 my-12 md:my-16 py-24 gap-4 relative">
-      <div className="bg-radial from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2"></div>
+      <div className="bg-radial from-blue-900 to-transparent rounded-full  h-80 w-80 lg:h-90 lg:w-90 sm:h-70 sm:w-70 z-0 blur-lg absolute sm:top-7/8 lg:top-6/10 transform -translate-x-1/2"></div>
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">Let`s Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
@@ -14,17 +14,17 @@ const Email = () => {
           enim? Sint recusandae alias rem et deserunt natus quod dolor cum!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href={"github.com"}>
+          <Link href={"https://github.com/eduoliveirachaves"}>
             <Image
               src={GitHubIcon}
-              alt="GitHub"
+              alt="GitHub icon"
               className="h-12 w-12 hover:scale-110 transition-all duration-300"
             />
           </Link>
-          <Link href={"linkedin.com"}>
+          <Link href={"https://linkedin.com/in/eduardo-eoc"}>
             <Image
               src={LinkedinIcon}
-              alt="Linkedin"
+              alt="Linkedin icon"
               className="h-12 w-12 hover:scale-110 transition-all duration-300"
             />
           </Link>
@@ -76,7 +76,7 @@ const Email = () => {
           </div>
           <button
             type="submit"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2.5 px-5 rounded-lg w-full text-sm transition-all duration-300"
+            className="bg-tertiary hover:bg-blue-900 text-white font-semibold py-2.5 px-5 rounded-lg w-full text-sm transition-all duration-300"
           >
             Send Message
           </button>
