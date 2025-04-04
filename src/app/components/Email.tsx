@@ -5,13 +5,17 @@ import Image from "next/image";
 
 const Email = () => {
   return (
-    <section className="grid md:grid-cols-2 my-12 md:my-16 py-24 gap-4 relative">
+    <section
+      id="contact"
+      className="grid md:grid-cols-2 my-12 md:my-16 py-24 gap-4 relative"
+    >
       <div className="bg-radial from-blue-900 to-transparent rounded-full  h-80 w-80 lg:h-90 lg:w-90 sm:h-70 sm:w-70 z-0 blur-lg absolute sm:top-7/8 lg:top-6/10 transform -translate-x-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Let`s Connect</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
-          enim? Sint recusandae alias rem et deserunt natus quod dolor cum!
+        <h5 className="text-2xl font-bold text-white my-2">
+          Conecte-se comigo
+        </h5>
+        <p className="text-[#ADB7BE] mb-4 max-w-md text-1xl">
+          Adoro conversar sobre tecnologia e compartilhar ideias. Me chama lá!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href={"https://github.com/eduoliveirachaves"}>
@@ -37,7 +41,7 @@ const Email = () => {
               htmlFor="email"
               className="text-white block text-sm font-medium mb-2 ml-1"
             >
-              Your email
+              Seu email
             </label>
             <input
               type="email"
@@ -51,12 +55,12 @@ const Email = () => {
               htmlFor="email"
               className="text-white block text-sm mb-2 font-medium ml-1"
             >
-              Subject
+              Assunto
             </label>
             <input
               type="text"
               id="subject"
-              placeholder="hi there!"
+              placeholder="Trabalho"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
             />
           </div>
@@ -65,12 +69,12 @@ const Email = () => {
               htmlFor="text"
               className="text-white block text-sm mb-2 font-medium ml-1"
             >
-              Message
+              Mensagem
             </label>
             <textarea
               name="message"
               id="message"
-              placeholder="Hello, I am interested in..."
+              placeholder="Olá, estou interessado em..."
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
             />
           </div>
@@ -78,7 +82,7 @@ const Email = () => {
             type="submit"
             className="bg-tertiary hover:bg-blue-900 text-white font-semibold py-2.5 px-5 rounded-lg w-full text-sm transition-all duration-300"
           >
-            Send Message
+            Enviar mensagem
           </button>
         </form>
       </div>

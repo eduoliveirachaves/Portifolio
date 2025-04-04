@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
@@ -9,7 +10,7 @@ const projectsData = [
     title: "React Portfolio Website",
     description: "Project 1 description",
     image: "/images/1.png",
-    tag: ["All", "Web"],
+    tag: ["Todos", "Web"],
     preview: "/",
     git: "/",
   },
@@ -18,7 +19,7 @@ const projectsData = [
     title: "Potography Portfolio Website",
     description: "Project 2 description",
     image: "/images/2.png",
-    tag: ["All", "Web"],
+    tag: ["Todos", "Web"],
     preview: "/",
     git: "/",
   },
@@ -27,7 +28,7 @@ const projectsData = [
     title: "E-commerce Application",
     description: "Project 3 description",
     image: "/images/3.png",
-    tag: ["All", "Web"],
+    tag: ["Todos", "Web"],
     preview: "/",
     git: "/",
   },
@@ -36,7 +37,7 @@ const projectsData = [
     title: "Food Ordering Application",
     description: "Project 4 description",
     image: "/images/1.png",
-    tag: ["All", "Mobile"],
+    tag: ["Todos", "Mobile"],
     preview: "/",
     git: "/",
   },
@@ -45,7 +46,7 @@ const projectsData = [
     title: "React Firebase Template",
     description: "Authentication and CRUD operations",
     image: "/images/2.png",
-    tag: ["All", "Web"],
+    tag: ["Todos", "Web"],
     preview: "/",
     git: "/",
   },
@@ -54,13 +55,17 @@ const projectsData = [
     title: "Full-stack Roadmap",
     description: "Project 5 description",
     image: "/images/3.png",
-    tag: ["All", "Web"],
+    tag: ["Todos", "Web"],
     preview: "/",
     git: "/",
   },
 ];
+
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Todos");
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, { once: true });
 
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag),
@@ -70,16 +75,21 @@ const ProjectsSection = () => {
     setTag(newTag);
   };
 
+  const cardVariants = {
+    initial: { y: 30, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
-    <>
+    <div id="projects" ref={ref} className="scroll-mt-22 sm:scroll-mt-70">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
+        Meus Projetos
       </h2>
       <div className="flex flex-row justify-center items-center gap-2 text-white my-6">
         <ProjectTag
-          name="All"
+          name="Todos"
           onClick={handleTagChange}
-          isSelected={tag === "All"}
+          isSelected={tag === "Todos"}
         />
         <ProjectTag
           name="Web"
@@ -92,19 +102,26 @@ const ProjectsSection = () => {
           isSelected={tag == "Mobile"}
         />
       </div>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            gitUrl={project.git}
-            previewUrl={project.preview}
-          />
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filteredProjects.map((project, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.7, delay: 0.2 + 0.25 * index }}
+          >
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.git}
+              previewUrl={project.preview}
+            />
+          </motion.li>
         ))}
-      </div>
-    </>
+      </ul>
+    </div>
   );
 };
 

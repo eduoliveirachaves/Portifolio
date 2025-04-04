@@ -24,18 +24,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul>
-        <li>Sistemas</li>
-        <li>Ufsc</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul>
-        <li>POO MOOC</li>
-        <li>Helsinki</li>
+        <li>Sistemas de Informação</li>
+        <li>Universidade Federal de Santa Catarina</li>
       </ul>
     ),
   },
@@ -52,7 +42,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="text-white">
+    <section id="about" className="text-white w-full">
       <div className="gap-8 items-center py-8 px-4 xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-16">
         <Image
           src="/images/about-image.png"
@@ -61,33 +51,30 @@ const AboutMe = () => {
           height={500}
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Um pouco sobre mim
+          </h2>
           <p className="text-white text-base md:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+            Me chamo Eduardo, sou estudante de Sistemas de Informação e entusiasta do
+            desenvolvimento de software. Tenho experiência com Java e Spring no
+            backend, além de JavaScript, TypeScript, React e Node.js no
+            desenvolvimento fullstack. Gosto de explorar novas tecnologias e
+            aprimorar minhas habilidades, sempre buscando escrever código limpo
+            e bem estruturado. Atualmente, estou focado em aprimorar minhas
+            habilidades em React e desenvolvimento mobile com React Native.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
             >
-              Skills
+              Tecnologias
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
             >
-              Education
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              Certifications
+              Educação
             </TabButton>
           </div>
           <div className="mt-8">
