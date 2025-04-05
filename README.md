@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 eduardochaves.tech
 
-## Getting Started
+Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos e informações de contato.  
+O site está hospedado na [Vercel](https://vercel.com) e usa um domínio personalizado `.tech`:
 
-First, run the development server:
+🌐 [**eduardochaves.tech**](https://eduardochaves.tech)
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- **React.js** e **Next.js** – Framework para construção da interface
+- **TypeScript** – Tipagem estática
+- **Tailwind CSS** – Estilização com utilitários CSS
+- **Hero Icons** – Ícones simples e responsivos
+- **Framer Motion** – Animações fluídas
+- **React Animations** – Animações reutilizáveis com React
+- **Resend** – Envio de e-mails via formulário de contato
+- **Vercel** – Deploy e hospedagem
+- **NPM** – Gerenciador de pacotes
+
+---
+
+## ✨ Funcionalidades
+
+- Layout responsivo
+- Transições e animações suaves
+- Formulário de contato com envio de e-mail
+- Otimização para SEO (tags de metadados)
+- Hospedado com domínio personalizado `.tech`
+
+---
+
+## ▶️ Como executar localmente
 
 ```bash
+git clone https://github.com/eduardochaves/portifolio-eduardo.git
+cd portifolio-eduardo
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Depois, acesse [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📨 Contato
 
-## Learn More
+Você pode me encontrar pelo formulário no site ou por e-mail:  
+📧 `eduoliveirach7@email.com`
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔗 Site online
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+O site está disponível em:  
+➡️ [**eduardochaves.tech**](https://eduardochaves.tech)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📝 Créditos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto foi inspirado e adaptado a partir de um trabalho original de [Nome do Autor Original]  
+A base do layout, estrutura ou lógica foi utilizada como referência com fins educacionais e de aprendizado pessoal.  
+Todos os direitos do projeto original pertencem ao autor.
+
+Alterações foram feitas no design, animações, funcionalidades e configuração para refletir meu estilo pessoal e objetivos.
+
+🔗 Projeto original: [repositório original](https://github.com/judygab/nextjs-portfolio)
