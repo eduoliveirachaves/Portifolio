@@ -12,14 +12,14 @@ const projectsData = [
     image: "/images/3.png",
     tag: ["Todos"],
     git: "https://github.com/eduoliveirachaves/E-commerce.back"
-  },{
+  }, {
     id: 7,
     title: "E-commerce Backend",
     description: "Usando Java, Spring Boot, PostgreSQL, Docker",
     image: "/images/3.png",
     tag: ["Backend"],
     git: "https://github.com/eduoliveirachaves/E-commerce.back"
-  },{
+  }, {
     id: 8,
     title: "E-commerce Frontend",
     description: "Usando React, Typescript, Tailwind CSS, ViteJS",
@@ -34,14 +34,14 @@ const projectsData = [
     image: "/images/planner.webp",
     tag: ["Todos"],
     git: "https://github.com/eduoliveirachaves/PlannerFront"
-  },{
+  }, {
     id: 9,
     title: "Planner Backend",
     description: "Usando Java, Spring Boot, MongoDB",
     image: "/images/planner.webp",
     tag: ["Backend"],
     git: "https://github.com/eduoliveirachaves/Planner"
-  },{
+  }, {
     id: 10,
     title: "Planner Frontend",
     description: "Usando Typescript, React",
@@ -53,8 +53,15 @@ const projectsData = [
     id: 3,
     title: "Present.ly",
     description: "Usando Typescript, React, Node.js, PostgreSQL, Express",
-    image: "/images/3.png",
+    image: "/images/present.png",
     tag: ["Todos"],
+    git: "https://github.com/eduoliveirachaves/present.ly.back"
+  }, {
+    id: 11,
+    title: "Present.ly Backend",
+    description: "Usando Node.js, PostgreSQL, Express, Sequelize",
+    image: "/images/present.png",
+    tag: ["Backend"],
     git: "https://github.com/eduoliveirachaves/present.ly.back"
   },
   {
@@ -64,7 +71,7 @@ const projectsData = [
     image: "/images/wordle.png",
     tag: ["Todos", "Frontend"],
     git: "https://github.com/eduoliveirachaves/word-game"
-  },
+  }
 ];
 
 const ProjectsSection = () => {
