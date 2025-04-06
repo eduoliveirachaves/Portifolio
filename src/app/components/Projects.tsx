@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
@@ -7,57 +7,63 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/1.png",
-    tag: ["Todos", "Web"],
-    preview: "/",
-    git: "/",
+    title: "E-commerce App",
+    description: "Usando Java, React, Spring Boot, PostgreSQL, Docker, Tailwind CSS",
+    image: "/images/3.png",
+    tag: ["Todos"],
+    git: "https://github.com/eduoliveirachaves/E-commerce.back"
+  },{
+    id: 7,
+    title: "E-commerce Backend",
+    description: "Usando Java, Spring Boot, PostgreSQL, Docker",
+    image: "/images/3.png",
+    tag: ["Backend"],
+    git: "https://github.com/eduoliveirachaves/E-commerce.back"
+  },{
+    id: 8,
+    title: "E-commerce Frontend",
+    description: "Usando React, Typescript, Tailwind CSS, ViteJS",
+    image: "/images/3.png",
+    tag: ["Frontend"],
+    git: "https://github.com/eduoliveirachaves/E-commerce.front"
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/2.png",
-    tag: ["Todos", "Web"],
-    preview: "/",
-    git: "/",
+    title: "Planner App",
+    description: "Usando Java, Typescript, React, Spring Boot, PostgreSQL",
+    image: "/images/planner.webp",
+    tag: ["Todos"],
+    git: "https://github.com/eduoliveirachaves/PlannerFront"
+  },{
+    id: 9,
+    title: "Planner Backend",
+    description: "Usando Java, Spring Boot, MongoDB",
+    image: "/images/planner.webp",
+    tag: ["Backend"],
+    git: "https://github.com/eduoliveirachaves/Planner"
+  },{
+    id: 10,
+    title: "Planner Frontend",
+    description: "Usando Typescript, React",
+    image: "/images/planner.webp",
+    tag: ["Frontend"],
+    git: "https://github.com/eduoliveirachaves/PlannerFront"
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Present.ly",
+    description: "Usando Typescript, React, Node.js, PostgreSQL, Express",
     image: "/images/3.png",
-    tag: ["Todos", "Web"],
-    preview: "/",
-    git: "/",
+    tag: ["Todos"],
+    git: "https://github.com/eduoliveirachaves/present.ly.back"
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/1.png",
-    tag: ["Todos", "Mobile"],
-    preview: "/",
-    git: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/2.png",
-    tag: ["Todos", "Web"],
-    preview: "/",
-    git: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/3.png",
-    tag: ["Todos", "Web"],
-    preview: "/",
-    git: "/",
+    title: "Jogo Termo (Wordle)",
+    description: "Termo é um jogo de palavras, onde o usuario tem que adivinhar a palavra correta em 6 tentativas",
+    image: "/images/wordle.png",
+    tag: ["Todos", "Frontend"],
+    git: "https://github.com/eduoliveirachaves/word-game"
   },
 ];
 
@@ -68,7 +74,7 @@ const ProjectsSection = () => {
   const isInView = useInView(ref, { once: true });
 
   const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag),
+    project.tag.includes(tag)
   );
 
   const handleTagChange = (newTag) => {
@@ -77,7 +83,7 @@ const ProjectsSection = () => {
 
   const cardVariants = {
     initial: { y: 30, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
+    animate: { y: 0, opacity: 1 }
   };
 
   return (
@@ -92,17 +98,17 @@ const ProjectsSection = () => {
           isSelected={tag === "Todos"}
         />
         <ProjectTag
-          name="Web"
+          name="Backend"
           onClick={handleTagChange}
-          isSelected={tag === "Web"}
+          isSelected={tag == "Backend"}
         />
         <ProjectTag
-          name="Mobile"
+          name="Frontend"
           onClick={handleTagChange}
-          isSelected={tag == "Mobile"}
+          isSelected={tag === "Frontend"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12 lg:grid-cols-3 sm:grid-cols-1">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -116,7 +122,6 @@ const ProjectsSection = () => {
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.git}
-              previewUrl={project.preview}
             />
           </motion.li>
         ))}
