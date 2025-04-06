@@ -46,7 +46,7 @@ const Email = () => {
             <input
               type="email"
               id="email"
-              placeholder="sherlock@email.com"
+              placeholder="seuemail@email.com"
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
             />
           </div>
