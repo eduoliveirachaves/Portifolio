@@ -42,7 +42,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section id="about" className="text-white w-full ">
+    <section id="about" className="text-white w-full">
       <div className="gap-4 items-center py-8 px-4 xl:gap-16 grid md:grid-cols-1 lg:grid-cols-2 sm:py-16 lg:px-16">
         <div className="w-fit h-fit lg:mb-45 md:mb-10">
           <Image
@@ -50,7 +50,7 @@ const AboutMe = () => {
             alt="image of about"
             width={800}
             height={800}
-            className="rounded-xl border-solid border-2 border-gray-700 shadow-2xs shadow-black/30 "
+            className="rounded-xl border-solid border-2 shadow-2xs shadow-black/30 "
           />
         </div>
         <div className="mt-5 md:mt-0 text-left flex flex-col h-full">
