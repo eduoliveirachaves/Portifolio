@@ -94,7 +94,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <div id="projects" ref={ref} className="scroll-mt-22 sm:scroll-mt-70">
+    <div id="projects" ref={ref} className="lg:scroll-mt-27 sm:scroll-mt-70">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         Meus Projetos
       </h2>

@@ -9,10 +9,14 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul>
-        <li>Sistemas de Informação</li>
-        <li>Universidade Federal de Santa Catarina</li>
-      </ul>
+      <div>
+        <div className="flex items-center gap-5">
+          <Image src="https://identidade.ufsc.br/files/2017/10/brasao_UFSC_vertical_sigla_fundo_escuro.png"
+                 alt="UFSC logo" width={40} height={40} className="mb-4" />
+          <h3 className="text-lg font-bold mb-2">Universidade Federal de Santa Catarina</h3>
+        </div>
+        <h4 className="text-md text-gray-400 font-semibold ">2º semestre - Bacharel em Sistemas de Informação </h4>
+      </div>
     )
   }
 ];
@@ -28,7 +32,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section id="about" className="text-white w-full">
+    <section id="about" className="text-white w-full scroll-mt-20">
       <div className="gap-4 items-center py-8 px-4 xl:gap-16 grid md:grid-cols-1 lg:grid-cols-2 sm:py-16 lg:px-16">
         <div className="w-fit h-fit lg:mb-45 md:mb-10">
           <Image
@@ -78,7 +82,7 @@ const AboutMe = () => {
               Educação
             </TabButton>
           </div>
-          <div className="mt-8 min-h-[160px]">
+          <div className="mt-8 min-h-[110px]">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>

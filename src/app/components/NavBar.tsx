@@ -25,16 +25,15 @@ export const NavBar = () => {
 
   return (
     <nav
-      className="flex fixed mx-auto border-b border-b-gray-950 top-0 left-0 right-0 z-10 bg-[rgba(18,18,18,0.8)] backdrop-blur-md bg-opacity-30 w-full lg:h-33 h-28 md:h-20 items-center">
-      <div className="flex container flex-wrap lg:py-4 items-center justify-between mx-auto p-4 sm:p-2 px-8">
-        <div className="flex items-center cursor-pointer lg:w-30 lg:h-30 md:w-13 md:h-13 w-20 h-20">
-          <Image
-            src={"/images/logo-removebg-preview.png"}
-            alt="Logo"
-            width={110}
-            height={100}
-          />
-        </div>
+      className="fixed mx-auto border-b  border-gray-950 top-0 left-0 right-0 z-11 bg-[rgba(18,18,18,0.9)] backdrop-blur-md lg:h-24 sm:h-15 h-26">
+      <div className="flex container flex-wrap lg:py-4 items-center justify-between mx-auto p-4 px-8 -mt-5">
+        <Image
+          src="/images/logo-removebg-preview.png"
+          alt="logo"
+          width={100}
+          height={100}
+          className="sm:w-20 sm:h-20 lg:w-30 lg:h-30"
+        />
         <div className="mobile-menu block md:hidden">
           {navbarOpen ? (
             <button
@@ -50,7 +49,7 @@ export const NavBar = () => {
             </button>
           )}
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
+        <div className="menu hidden md:block md:w-auto  mb-4" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>

@@ -154,12 +154,12 @@ const Skills = () => {
 
   return (
     <section
-      className="overflow-hidden w-full mb-15">
+      className="overflow-hidden w-full mb-20">
       <motion.div
         className="flex gap-13 items-center justify-center"
         animate={{ x: ["-95%", "0"] }}
         transition={{
-          duration: 100,
+          duration: 110,
           repeat: Infinity,
           ease: "linear"
         }}
