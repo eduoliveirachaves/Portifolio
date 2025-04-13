@@ -1,37 +1,40 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
 
 const navLinks = [
   {
     title: "Sobre mim",
-    path: "#about",
+    path: "#about"
   },
   {
     title: "Projetos",
-    path: "#projects",
+    path: "#projects"
   },
   {
     title: "Contato",
-    path: "#contact",
-  },
+    path: "#contact"
+  }
 ];
 
 export const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
-      <div className="flex container flex-wrap lg:py-4 items-center justify-between mx-auto p-4 px-8">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
-        >
-          EC
-        </Link>
+    <nav
+      className="flex fixed mx-auto border-b border-b-gray-950 top-0 left-0 right-0 z-10 bg-[rgba(18,18,18,0.8)] backdrop-blur-md bg-opacity-30 w-full lg:h-33 h-28 md:h-20 items-center">
+      <div className="flex container flex-wrap lg:py-4 items-center justify-between mx-auto p-4 sm:p-2 px-8">
+        <div className="flex items-center cursor-pointer lg:w-30 lg:h-30 md:w-13 md:h-13 w-20 h-20">
+          <Image
+            src={"/images/logo-removebg-preview.png"}
+            alt="Logo"
+            width={110}
+            height={100}
+          />
+        </div>
         <div className="mobile-menu block md:hidden">
           {navbarOpen ? (
             <button
@@ -41,7 +44,8 @@ export const NavBar = () => {
               <XMarkIcon className="h-5 w-5" />
             </button>
           ) : (
-            <button onClick={() => setNavbarOpen(true)} className="flex items-center px-3 py-2 text-slate-200 border rounded border-slate-200 hover:text-white hover:border-white">
+            <button onClick={() => setNavbarOpen(true)}
+                    className="flex items-center px-3 py-2 text-slate-200 border rounded border-slate-200 hover:text-white hover:border-white">
               <Bars3Icon className="h-5 w-5" />
             </button>
           )}
@@ -56,7 +60,7 @@ export const NavBar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks}/> : null}
+      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
   );
 };

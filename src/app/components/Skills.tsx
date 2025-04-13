@@ -106,9 +106,45 @@ const logos = [
     href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     alt: "CSS3 logo",
     src: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-    width: 140,
-    height: 55
+    width: 144,
+    height: 140
+  },
+  {
+    href: "https://git-scm.com/",
+    alt: "Git logo",
+    src: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
+    width: 170,
+    height: 120
+  },
+  {
+    href: "https://nextjs.org/",
+    alt: "Next.js logo",
+    src: "https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000",
+    width: 180,
+    height: 50
+  },
+  {
+    href: "https://nestjs.com/",
+    alt: "NestJS logo",
+    src: "https://nestjs.com/img/logo.svg",
+    width: 185,
+    height: 180
+  },
+  {
+    href: "https://www.npmjs.com/",
+    alt: "npm logo",
+    src: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg",
+    width: 170,
+    height: 50
+  },
+  {
+    href: "https://insomnia.rest/",
+    alt: "Insomnia logo",
+    src: "https://insomnia.rest/images/insomnia-logo.svg",
+    width: 210,
+    height: 190
   }
+
 ].reverse();
 
 const carrosel = logos.concat(logos).concat(logos).concat(logos).concat(logos);
@@ -120,7 +156,7 @@ const Skills = () => {
     <section
       className="overflow-hidden w-full mb-15">
       <motion.div
-        className="flex gap-12 items-center justify-center"
+        className="flex gap-13 items-center justify-center"
         animate={{ x: ["-95%", "0"] }}
         transition={{
           duration: 100,

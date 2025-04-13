@@ -40,7 +40,7 @@ const AboutMe = () => {
           />
         </div>
         <div className="mt-5 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl text-center font-bold text-white mb-6">
+          <h2 className="text-4xl text-center font-bold text-white mb-7">
             Sobre mim
           </h2>
           <div className="grid gap-4 items-center justify-center text-center md:text-left">
