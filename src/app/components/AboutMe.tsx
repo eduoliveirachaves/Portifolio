@@ -6,20 +6,6 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="">
-        <li>Node.js</li>
-        <li>Java</li>
-        <li>PostgreSQL</li>
-        <li>React</li>
-        <li>Typescript</li>
-        <li>Spring Boot</li>
-      </ul>
-    )
-  },
-  {
     title: "Education",
     id: "education",
     content: (
@@ -32,7 +18,7 @@ const TAB_DATA = [
 ];
 
 const AboutMe = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("education");
   const [, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -85,12 +71,6 @@ const AboutMe = () => {
             </p>
           </div>
           <div className="flex flex-row justify-start mt-8">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Tecnologias
-            </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
