@@ -31,7 +31,7 @@ export const HeroSection = () => {
                     exit={{
                       opacity: 0,
                       transition: {
-                        duration: 0.5,
+                        duration: 0.4,
                       },
                     }}
                     transition={{
@@ -50,13 +50,13 @@ export const HeroSection = () => {
               sequence={[
                 () => setShowO(true),
                 "Edu",
-                1500,
+                1800,
                 () => setShowO(false),
                 "FullStack Developer",
-                1000,
+                1200,
                 () => setHasAnimatedOnce(true),
                 "Estudante",
-                1000,
+                800,
               ]}
               wrapper="span"
               speed={50}
@@ -74,11 +74,11 @@ export const HeroSection = () => {
             >
               Me contrate
             </button>
-            <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-tertiary to-secondary hover:bg-slate-800 text-white mt-3">
+            {/* <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-500 via-tertiary to-secondary hover:bg-slate-800 text-white mt-3">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Baixar CV
               </span>
-            </button>
+            </button> */}
           </div>
         </motion.div>
         <motion.div
